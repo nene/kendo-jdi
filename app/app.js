@@ -33,6 +33,7 @@ $(document).ready(function() {
     kendo.bind($(".top-bar"), APP.topBar);
     kendo.bind($(".right-pane"), APP.EmptyModelInstance);
 
+    $("#date-picker").kendoDatePicker();
 });
 
 
