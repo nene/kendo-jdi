@@ -117,12 +117,12 @@ APP.isChangingDate = false;
 APP.dataSource = new kendo.data.DataSource({
     transport: {
         read: {
-            url: "data.json", 
-            dataType: "json" 
+            url: "data.json",
+            dataType: "json"
         }
     },
     schema: {
-        model: APP.Task, 
+        model: APP.Task,
         data: function(data) {
             data.forEach(function(item){
                 item.header = "";
