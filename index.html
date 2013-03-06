@@ -7,14 +7,61 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
+        <style>
+            .product {
+                position: relative;
+            }
+
+            .product.header {
+                margin-top: 50px;
+            }
+
+            .product h2 {
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                color: black;
+            }
+
+
+            html, body {
+                height: 100%;
+            }
+
+/*            .main-content {
+                height: 95% !important;
+            }
+
+            .left-pane, .right-pane {
+                width: 45%;
+                display:inline-block;
+            }
+
+            .right-pane {
+                /*float: right;*/
+            }*/
+
+        </style>
+
         <script type="text/x-kendo-tmpl" id="list-tpl">
-        <div class="product">
-            <h2>${header}</h2>
+        <div class="product # if (header) { # header # } #">
+            # if (header) { #
+                <h2 class="task-header">${header}</h2>
+            # } #
             <h4>${label}</h4>
-            # var data = new Date(date).getTime(); #
-            # var now = Date.now(); #
-            #  #
         </div>
+        </script>
+
+        <script id="row-template" type="text/x-kendo-template">
+            <tr>
+                <td data-bind="text: name">
+                </td>
+                <td>
+                    #: kendo.toString(get("price"), "C") #
+                </td>
+                <td data-bind="text: unitsInStock"></td>
+                <td><button data-bind="click: deleteProduct">Delete</button></td>
+            </tr>
         </script>
 
 
@@ -29,16 +76,33 @@
 
     </head>
     <body>
-       
 
     <div class="page">
-        <div class="top-bar"></div>
+        <div class="top-bar">
+            <button type="button" data-bind="click: addTask">Add Task</button></div>
         <div class="main-content">
             <div class="left-pane">
                 List View
             </div>
             <div class="right-pane">
-                Detail View
+                <p data-bind="text: name"></p>
+                <div data-bind="visible: isVisible">
+                    <div data-bind="invisible: isEditing">
+                        Detail View 
+                        <p data-bind="text: label"> No task selected</p>
+                        <hr>
+                        <p data-bind="text: getDueDate"></p>
+
+                        Added: today <br>
+                        <button type="button" data-bind="click: deleteRecord">Delete</button>
+                        <button type="button" data-bind="click: editRecord">Edit</button>
+                    </div>
+                    <div data-bind="visible: isEditing">
+                        Task Label: <input data-bind="value: label"><br>
+                        Duration: <input data-bind="value: duration"><br>
+                        <button type="button" data-bind="click: doneEditing">Done Editing</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

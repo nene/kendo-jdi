@@ -1,8 +1,8 @@
 [
-    {"id":1, "label": "Got home",              "date": "2011-12-10", "duration": 60, "done": 0},
-    {"id":2, "label": "Do shopping",           "date": "2011-12-10", "duration": 60, "done": 0},
-    {"id":3, "label": "Hike around",           "date": "2011-12-10", "duration": 60, "done": 0},
-    {"id":4, "label": "Visit grandma",         "date": "2011-12-10", "duration": 60, "done": 0},
-    {"id":5, "label": "Re-implement this app", "date": "2011-12-10", "duration": 60, "done": 0}
+    {"id":1, "label": "Got home",              "date": "2013-3-9", "duration": 60, "done": false},
+    {"id":2, "label": "Do shopping",           "date": "2014-12-10", "duration": 60, "done": false},
+    {"id":3, "label": "Hike around",           "date": "2011-12-10", "duration": 60, "done": false},
+    {"id":4, "label": "Visit grandma",         "date": "2011-12-10", "duration": 60, "done": false},
+    {"id":5, "label": "Re-implement this app", "date": "2013-3-6", "duration": 60, "done": false}
 ]
 
