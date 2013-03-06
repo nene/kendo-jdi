@@ -1,0 +1,8 @@
+[
+    {"id":1, "label": "Got home",              "date": "2011-12-10", "duration": 60, "done": false},
+    {"id":1, "label": "Do shopping",           "date": "2011-12-10", "duration": 60, "done": false},
+    {"id":1, "label": "Hike around",           "date": "2011-12-10", "duration": 60, "done": false},
+    {"id":1, "label": "Visit grandma",         "date": "2011-12-10", "duration": 60, "done": false},
+    {"id":1, "label": "Re-implement this app", "date": "2011-12-10", "duration": 60, "done": false}
+]
+
