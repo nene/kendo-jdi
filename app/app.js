@@ -226,6 +226,7 @@ APP.topBar = kendo.observable({
         task.set('label', 'untitled');
         task.set('duration', 30);
         APP.dataSource.add(task);
+        task.editRecord();
     }
 });
 
