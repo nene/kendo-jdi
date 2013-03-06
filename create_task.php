@@ -1,7 +1,7 @@
 <?php
 
-//read from POST - might need to be @file_get_contents('php://input') instead
-$json = http_get_request_body();
+//read from POST
+$json = @file_get_contents('php://input');
 
 $obj = json_decode($json);
 
