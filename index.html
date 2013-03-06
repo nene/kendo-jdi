@@ -22,6 +22,9 @@
                 left: 0;
                 color: black;
             }
+            .product h4.done {
+                text-decoration: line-through;
+            }
 
 
             html, body {
@@ -48,7 +51,7 @@
             # if (header) { #
                 <h2 class="task-header">${header}</h2>
             # } #
-            <h4>${label}</h4>
+            <h4 class="# if (done) { # done # } #">${label}</h4>
         </div>
         </script>
 
@@ -94,6 +97,7 @@
                         <p data-bind="text: getDueDate"></p>
 
                         Added: today <br>
+                        <button type="button" data-bind="click: markDone">Done!</button>
                         <button type="button" data-bind="click: deleteRecord">Delete</button>
                         <button type="button" data-bind="click: editRecord">Edit</button>
                     </div>

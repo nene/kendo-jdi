@@ -108,6 +108,11 @@ APP.Task = kendo.data.Model.define({
     doneEditing: function() {
         APP.isEditingTask = false;
         APP.setSelected(this);
+    },
+
+    // toggles done flag
+    markDone: function() {
+        this.set("done", !this.get("done"));
     }
 });
 
